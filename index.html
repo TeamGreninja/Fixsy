@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fixsy - Community Problem Solver</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo-container">
+                <h1 class="logo-text" id="logo">Fixsy</h1>
+            </div>
+            <div class="nav-links">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#issues" class="nav-link">Issues</a>
+                <a href="#community" class="nav-link">Community</a>
+            </div>
+            <div class="nav-actions">
+                <button class="btn btn-secondary btn-small" id="loginBtn">Login</button>
+                <div class="user-menu" id="userMenu" hidden>
+                    <button class="user-icon-btn" id="userIconBtn" aria-label="User menu">
+                        <span class="user-avatar-icon" id="userAvatarIcon">F</span>
+                    </button>
+                    <div class="user-dropdown" id="userDropdown">
+                        <div class="dropdown-header">
+                            <span class="user-avatar-dropdown" id="userAvatarDropdown">F</span>
+                            <div>
+                                <div class="user-name-dropdown" id="userNameDropdown">User</div>
+                                <div class="user-email-dropdown" id="userEmailDropdown">user@example.com</div>
+                            </div>
+                        </div>
+                        <div class="dropdown-divider"></div>
+                        <button class="dropdown-item" id="dashboardBtn">
+                            <span>📊</span> Dashboard
+                        </button>
+                        <button class="dropdown-item" id="logoutBtnFromMenu">
+                            <span>🚪</span> Logout
+                        </button>
+                    </div>
+                </div>
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <span class="theme-icon">🌙</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-background">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="gradient-orb orb-3"></div>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="title-word" data-word="Fixsy">Fixsy</span>
+            </h1>
+            <p class="hero-subtitle">Your Community Problem Solver</p>
+            <p class="hero-description">Connect, collaborate, and solve problems together. Join a community-driven platform where every problem finds its solution.</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary" id="ctaGetStarted">Get Started</button>
+                <button class="btn btn-secondary" id="ctaLearnMore">Learn More</button>
+                <button class="btn btn-secondary" id="ctaSubmitProblem">Submit a Problem</button>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse"></div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <h2 class="section-title">Powerful Features</h2>
+            <div class="feature-actions">
+                <div class="searchbar">
+                    <input type="search" id="featureSearch" class="search-input" placeholder="Search features... (press / to focus)" aria-label="Search features">
+                </div>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">💬</div>
+                    <h3 class="feature-title">Community Forum</h3>
+                    <p class="feature-description">Engage with a vibrant community of problem solvers and share your expertise.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🤖</div>
+                    <h3 class="feature-title">SolvR AI Assistant</h3>
+                    <p class="feature-description">Get instant help from our AI-powered chatbot, SolvR, available 24/7.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🪲</div>
+                    <h3 class="feature-title">Issues</h3>
+                    <p class="feature-description">Explore common student issues and learn how to prevent and resolve them.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔍</div>
+                    <h3 class="feature-title">Smart Search</h3>
+                    <p class="feature-description">Find solutions quickly with our intelligent search system.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">👥</div>
+                    <h3 class="feature-title">Collaboration</h3>
+                    <p class="feature-description">Work together with others to solve complex problems efficiently.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⭐</div>
+                    <h3 class="feature-title">Reputation System</h3>
+                    <p class="feature-description">Build your reputation by helping others solve their problems.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3 class="feature-title">Analytics</h3>
+                    <p class="feature-description">Track your contributions and see your impact on the community.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Issues Section -->
+    <section class="issues" id="issues">
+        <div class="container">
+            <h2 class="section-title">Student Issues You Can Face</h2>
+            <div class="issues-grid">
+                <div class="issue-card">
+                    <div class="issue-icon">⏳</div>
+                    <div class="issue-title">Time Management</div>
+                    <p class="issue-desc">Balancing classes, assignments, clubs, and personal time can lead to burnout. Learn practical prioritization and planning techniques.</p>
+                </div>
+                <div class="issue-card">
+                    <div class="issue-icon">💸</div>
+                    <div class="issue-title">Budgeting & Finances</div>
+                    <p class="issue-desc">Unexpected expenses, stationery, labs, and outings add up quickly. We share budgeting tips and student-friendly financial tools.</p>
+                </div>
+                <div class="issue-card">
+                    <div class="issue-icon">🧠</div>
+                    <div class="issue-title">Exam Anxiety</div>
+                    <p class="issue-desc">Pre-exam stress and blank-outs are common. Learn evidence-backed strategies to prepare and perform calmly under pressure.</p>
+                </div>
+                <div class="issue-card">
+                    <div class="issue-icon">🤝</div>
+                    <div class="issue-title">Group Projects</div>
+                    <p class="issue-desc">Uneven workload and coordination issues happen. Use clear roles, communication tools, and regular check-ins to keep teams on track.</p>
+                </div>
+                <div class="issue-card">
+                    <div class="issue-icon">🌐</div>
+                    <div class="issue-title">Internships & Placements</div>
+                    <p class="issue-desc">Applications, resumes, and interviews need preparation. Find resources, checklists, and practice materials tailored for students.</p>
+                </div>
+                <div class="issue-card">
+                    <div class="issue-icon">🏠</div>
+                    <div class="issue-title">Hostel & Commute</div>
+                    <p class="issue-desc">Roommates, mess timings, and travel delays can affect study routines. Tips to set routines, boundaries, and maintain focus.</p>
+                </div>
+                <div class="issue-card">
+                    <div class="issue-icon">🚫</div>
+                    <div class="issue-title">Ragging Prevention</div>
+                    <p class="issue-desc">Ragging is illegal and harmful. Know your rights, report incidents immediately to authorities, and seek support. You're not alone—help is available 24/7.</p>
+                </div>
+                <div class="issue-card">
+                    <div class="issue-icon">📚</div>
+                    <div class="issue-title">Academic Pressure</div>
+                    <p class="issue-desc">Coursework overload, competitive environment, and grade expectations can be overwhelming. Learn stress management and study techniques.</p>
+                </div>
+                <div class="issue-card">
+                    <div class="issue-icon">💔</div>
+                    <div class="issue-title">Mental Health</div>
+                    <p class="issue-desc">Anxiety, depression, and loneliness are common. Don't hesitate to seek counseling, talk to friends, or access campus mental health resources.</p>
+                </div>
+                <div class="issue-card">
+                    <div class="issue-icon">🌐</div>
+                    <div class="issue-title">Digital Safety</div>
+                    <p class="issue-desc">Cyberbullying, online fraud, and privacy concerns. Learn to protect yourself online, recognize scams, and report cybercrimes.</p>
+                </div>
+                <div class="issue-card">
+                    <div class="issue-icon">🍕</div>
+                    <div class="issue-title">Health & Nutrition</div>
+                    <p class="issue-desc">Irregular meals, junk food, and lack of exercise affect both physical and mental well-being. Tips for balanced nutrition and fitness.</p>
+                </div>
+                <div class="issue-card">
+                    <div class="issue-icon">📱</div>
+                    <div class="issue-title">Social Media Pressure</div>
+                    <p class="issue-desc">Comparison, FOMO, and screen addiction impact mental health. Learn healthy social media habits and digital detox strategies.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <h2 class="section-title">About Fixsy</h2>
+                <p class="about-text">
+                    Fixsy is a revolutionary platform designed to bring communities together to solve problems collaboratively. 
+                    Whether you're facing a technical challenge, seeking advice, or looking to help others, Fixsy provides 
+                    the tools and community support you need.
+                </p>
+                <p class="about-text">
+                    Our mission is to create a space where knowledge flows freely, problems are solved efficiently, and 
+                    communities thrive through collaboration and mutual support.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Section -->
+    <section class="community" id="community">
+        <div class="container">
+            <h2 class="section-title">Join Our Community</h2>
+            <p class="community-description">Be part of a thriving community of problem solvers helping each other succeed.</p>
+            <div class="community-stats">
+                <div class="stat-card">
+                    <div class="stat-number" data-count-to="10000">0</div>
+                    <div class="stat-label">Active Members</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" data-count-to="50000">0</div>
+                    <div class="stat-label">Problems Solved</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" data-count-to="95" data-suffix="%">0</div>
+                    <div class="stat-label">Satisfaction Rate</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Submit Problem Modal -->
+    <div class="modal" id="submitModal" role="dialog" aria-modal="true" aria-labelledby="submitTitle" aria-hidden="true">
+        <div class="modal-backdrop" id="submitBackdrop"></div>
+        <div class="modal-dialog" role="document">
+            <div class="modal-header">
+                <h3 id="submitTitle">Submit a Problem</h3>
+                <button class="modal-close" id="submitClose" aria-label="Close">✕</button>
+            </div>
+            <div class="modal-body">
+                <form id="submitForm">
+                    <div class="form-field">
+                        <label for="problemTitle">Title</label>
+                        <input type="text" id="problemTitle" name="title" placeholder="Brief problem title" required maxlength="100">
+                    </div>
+                    <div class="form-field">
+                        <label for="problemCategory">Category</label>
+                        <select id="problemCategory" name="category" required>
+                            <option value="">Select a category</option>
+                            <option>Technical</option>
+                            <option>Community</option>
+                            <option>Design</option>
+                            <option>Process</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                    <div class="form-field">
+                        <label for="problemDetails">Details</label>
+                        <textarea id="problemDetails" name="details" rows="5" placeholder="Describe the problem, what you've tried, and expected outcome" required></textarea>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-secondary" id="submitCancel">Cancel</button>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toasts -->
+    <div class="toast-container" id="toastContainer" aria-live="polite" aria-atomic="true"></div>
+
+    <!-- Login Modal -->
+    <div class="modal login-modal" id="loginModal" role="dialog" aria-modal="true" aria-labelledby="loginTitle" aria-hidden="true">
+        <div class="modal-backdrop" id="loginBackdrop"></div>
+        <div class="modal-dialog login-dialog" role="document">
+            <div class="modal-header">
+                <h3 id="loginTitle">Welcome back</h3>
+                <button class="modal-close" id="loginClose" aria-label="Close">✕</button>
+            </div>
+            <div class="modal-body">
+                <div class="auth-tabs">
+                    <button class="auth-tab active" id="loginTab">Login</button>
+                    <button class="auth-tab" id="registerTab">Register</button>
+                </div>
+
+                <!-- Login Form -->
+                <form id="loginForm" class="auth-form active" novalidate>
+                    <div class="form-field">
+                        <label for="loginEmail">Email</label>
+                        <input type="email" id="loginEmail" placeholder="you@example.com" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="loginPassword">Password</label>
+                        <input type="password" id="loginPassword" placeholder="••••••••" required minlength="6">
+                    </div>
+                    <div class="form-field" style="display:flex;align-items:center;gap:8px;">
+                        <input type="checkbox" id="loginRemember" checked>
+                        <label for="loginRemember">Remember me</label>
+                    </div>
+                    <div class="form-divider">
+                        <span>or</span>
+                    </div>
+                    <button type="button" class="btn btn-google" id="googleLoginBtn">
+                        <span>G</span> Continue with Google
+                    </button>
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-secondary" id="loginCancel">Cancel</button>
+                        <button type="submit" class="btn btn-primary">Login</button>
+                    </div>
+                </form>
+
+                <!-- Register Form -->
+                <form id="registerForm" class="auth-form" novalidate>
+                    <div class="form-field">
+                        <label for="registerName">Full Name</label>
+                        <input type="text" id="registerName" placeholder="John Doe" required minlength="2">
+                    </div>
+                    <div class="form-field">
+                        <label for="registerEmail">Email</label>
+                        <input type="email" id="registerEmail" placeholder="you@example.com" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="registerPassword">Password</label>
+                        <input type="password" id="registerPassword" placeholder="••••••••" required minlength="6">
+                    </div>
+                    <div class="form-field">
+                        <label for="registerConfirmPassword">Confirm Password</label>
+                        <input type="password" id="registerConfirmPassword" placeholder="••••••••" required minlength="6">
+                    </div>
+                    <div class="form-divider">
+                        <span>or</span>
+                    </div>
+                    <button type="button" class="btn btn-google" id="googleRegisterBtn">
+                        <span>G</span> Sign up with Google
+                    </button>
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-secondary" id="registerCancel">Cancel</button>
+                        <button type="submit" class="btn btn-primary">Register</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dashboard Modal -->
+    <div class="modal dashboard-modal" id="dashboardModal" role="dialog" aria-modal="true" aria-labelledby="dashboardTitle" aria-hidden="true">
+        <div class="modal-backdrop" id="dashboardBackdrop"></div>
+        <div class="modal-dialog dashboard-dialog" role="document">
+            <div class="modal-header">
+                <h3 id="dashboardTitle">Student Dashboard</h3>
+                <button class="modal-close" id="dashboardClose" aria-label="Close">✕</button>
+            </div>
+            <div class="modal-body">
+                <div class="dashboard-stats">
+                    <div class="dashboard-stat-card">
+                        <div class="stat-icon">📝</div>
+                        <div class="stat-info">
+                            <div class="stat-value" id="totalSubmissions">0</div>
+                            <div class="stat-label">Total Submissions</div>
+                        </div>
+                    </div>
+                    <div class="dashboard-stat-card">
+                        <div class="stat-icon">✅</div>
+                        <div class="stat-info">
+                            <div class="stat-value" id="solvedProblems">0</div>
+                            <div class="stat-label">Solved</div>
+                        </div>
+                    </div>
+                    <div class="dashboard-stat-card">
+                        <div class="stat-icon">⏳</div>
+                        <div class="stat-info">
+                            <div class="stat-value" id="pendingProblems">0</div>
+                            <div class="stat-label">Pending</div>
+                        </div>
+                    </div>
+                    <div class="dashboard-stat-card">
+                        <div class="stat-icon">💬</div>
+                        <div class="stat-info">
+                            <div class="stat-value" id="totalReplies">0</div>
+                            <div class="stat-label">Replies Received</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dashboard-section">
+                    <h4 class="dashboard-section-title">Recent Activity</h4>
+                    <div class="activity-list" id="activityList">
+                        <div class="activity-empty">No submissions yet. Submit your first problem to get started!</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">Fixsy</div>
+            <div class="footer-actions">
+                <span class="kbd">/</span> Focus search
+                <span class="dot">•</span>
+                <span class="kbd">?</span> Open SolvR
+                <span class="dot">•</span>
+                <span class="kbd">t</span> Toggle theme
+            </div>
+        </div>
+    </footer>
+
+    <!-- SolvR Chatbot -->
+    <div class="chatbot-container" id="chatbotContainer">
+        <div class="chatbot-header" id="chatbotHeader">
+            <div class="chatbot-title">
+                <span class="chatbot-icon">🤖</span>
+                <span>SolvR</span>
+            </div>
+            <button class="chatbot-minimize" id="chatbotMinimize">−</button>
+        </div>
+        <div class="chatbot-body" id="chatbotBody">
+            <div class="chatbot-messages" id="chatbotMessages">
+                <div class="message bot-message">
+                    <div class="message-content">
+                        <p>Hello! I'm SolvR, your AI assistant. How can I help you today?</p>
+                    </div>
+                </div>
+            </div>
+            <div class="chatbot-input-container">
+                <input type="text" class="chatbot-input" id="chatbotInput" placeholder="Type your message...">
+                <button class="chatbot-send" id="chatbotSend">➤</button>
+            </div>
+        </div>
+    </div>
+    <button class="chatbot-toggle" id="chatbotToggle">
+        <span class="chatbot-toggle-icon">🤖</span>
+    </button>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">Fixsy</h3>
+                    <p class="footer-description">Your community-driven platform for solving problems collaboratively. Connect, learn, and grow together.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Facebook">📘</a>
+                        <a href="#" class="social-link" aria-label="Twitter">🐦</a>
+                        <a href="#" class="social-link" aria-label="LinkedIn">💼</a>
+                        <a href="#" class="social-link" aria-label="Instagram">📷</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#issues">Issues</a></li>
+                        <li><a href="#community">Community</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-heading">Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="#issues">Student Issues</a></li>
+                        <li><a href="#features">Community Forum</a></li>
+                        <li><a href="#" id="footerSubmitProblem">Submit Problem</a></li>
+                        <li><a href="#" id="footerSolvR">SolvR AI Assistant</a></li>
+                        <li><a href="#">Help Center</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-heading">Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Report Issue</a></li>
+                        <li><a href="#">Anti-Ragging Helpline</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Fixsy. All rights reserved. Built with ❤️ for students.</p>
+                <div class="footer-actions">
+                    <span class="kbd">/</span> Focus search
+                    <span class="dot">•</span>
+                    <span class="kbd">?</span> Open SolvR
+                    <span class="dot">•</span>
+                    <span class="kbd">t</span> Toggle theme
+                    <span class="dot">•</span>
+                    <span class="kbd">l</span> Login
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
